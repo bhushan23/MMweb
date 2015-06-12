@@ -1,0 +1,128 @@
+@(size: Int)
+<!DOCTYPE html>
+<html lang="en">
+
+@mainheader()
+<style>
+    
+    .bottom-text {
+    position: relative;
+}
+
+.bottom-text span {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+}
+</style>
+<body>
+@navbar()
+<!-- Sidebar -->
+
+        <!-- /#sidebar-wrapper -->
+    <!-- Page Content -->
+    
+        <!--
+        <div class="row">
+            <div class="col-md-9">
+
+                <div class="row carousel-holder">
+
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>background-size : 100% autobackground-size : 100% auto
+            -->
+                <div class="row">
+
+<div class="container">
+    
+            <div id="sidebar-wrapper" class="sidebar-right">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Branch Menu
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Starters</a>
+                </li>
+                <li>
+                    <a href="#">Burgers</a>
+                </li>
+                <li>
+                    <a href="#">Chinese</a>
+                </li>
+            
+            </ul>
+        </div>
+                @for(index <- 0 until  size) {
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="thumbnail">
+                        <div class="thumbnail bottom-text" style="background-image:url(@routes.Assets.at("/images/products/chicken_cheese_maggi.jpg")); height: 200px;  background-repeat: no-repeat; background-size : 100% auto; ">
+                        
+                     
+                        <h4 style=" position: absolute; left: 10%; width: 100%; top: 0;"><a href="#" >Chicken Cheese</a> </h4>
+                           <!-- <img src routes.Assets.at("images/products/chicken_cheese_maggi.jpg")" alt="">-->
+                          
+                                <span ><b>Freshly Cooked nestle chicken cheese maggi</b></span>
+                        </div>
+                           
+                         <div class="caption"  >
+                                 <p class="pull-right">₹ 80</p>
+                                <p>Quantity <input type="text" value="1" style ="width:10%">   <a href="#" class="fui-plus-circle"> </a>   </p>
+                              
+                                
+                            <div class="ratings">
+                                <p class="pull-right">15 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                }
+             
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+@mainfooter()
+
+</body>
+
+</html>
